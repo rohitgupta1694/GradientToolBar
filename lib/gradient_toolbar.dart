@@ -10,37 +10,37 @@ class GradientToolBar extends StatelessWidget {
   GradientToolBar(
       {Key key,
       this.title,
-      this.textColor,
-      this.fontSize,
-      this.fontStyle,
-      this.fontWeight,
-      this.toolbarStartColor,
-      this.toolbarEndColor,
-      this.gradientTileMode,
+        this.textColor = Colors.white,
+        this.fontSize = 20.0,
+        this.fontStyle = FontStyle.normal,
+        this.fontWeight = FontWeight.w600,
+        this.toolbarStartColor = const Color(0xFF414345),
+        this.toolbarEndColor = const Color(0xFF232526),
+        this.gradientTileMode = TileMode.clamp,
       this.needLeadingButton,
       this.needTrailingButton,
-      this.trailingIcon,
+        this.trailingIcon = Icons.search,
       this.onLeadingIconClick,
       this.onTrailingIconClick,
-      this.leadingIconColor,
-      this.trailingIconColor})
+        this.leadingIconColor = Colors.white,
+        this.trailingIconColor = Colors.white})
       : assert(title != null),
         assert(needLeadingButton != null),
         assert(needTrailingButton != null),
         super(key: key);
 
-  String title;
-  double fontSize;
-  TileMode gradientTileMode;
-  FontStyle fontStyle;
-  FontWeight fontWeight;
-  IconData trailingIcon;
-  bool needLeadingButton, needTrailingButton;
-  Color textColor,
+  final String title;
+  final Color textColor,
       toolbarStartColor,
       toolbarEndColor,
       leadingIconColor,
       trailingIconColor;
+  final double fontSize;
+  final FontStyle fontStyle;
+  final FontWeight fontWeight;
+  final IconData trailingIcon;
+  final TileMode gradientTileMode;
+  final bool needLeadingButton, needTrailingButton;
   final ValueChanged<bool> onLeadingIconClick, onTrailingIconClick;
 
   void _onTrailingIconClick() {
@@ -61,7 +61,6 @@ class GradientToolBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    getDefaultValues();
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     final double statusBarHeight = MediaQuery.of(context).padding.top;
     return Container(
@@ -135,21 +134,4 @@ class GradientToolBar extends StatelessWidget {
           onPressed: _onTrailingIconClick, // null disables the button
         )
       : Container(child: Text(""));
-
-  void getDefaultValues() {
-    if (title == null) title = "Gradient Tool Bar";
-    if (needLeadingButton == null) needLeadingButton = false;
-    if (needTrailingButton == null) needTrailingButton = false;
-    if (trailingIcon == null) trailingIcon = Icons.search;
-    if (fontSize == null) fontSize = 20.0;
-    if (gradientTileMode == null) gradientTileMode = TileMode.clamp;
-    if (fontStyle == null) fontStyle = FontStyle.normal;
-    if (fontWeight == null) fontWeight = FontWeight.w600;
-    if (trailingIcon == null) trailingIcon = Icons.search;
-    if (textColor == null) textColor = Colors.white;
-    if (toolbarStartColor == null) toolbarStartColor = Color(0xFF414345);
-    if (toolbarEndColor == null) toolbarEndColor = Color(0xFF232526);
-    if (leadingIconColor == null) leadingIconColor = Colors.white;
-    if (trailingIconColor == null) trailingIconColor = Colors.white;
-  }
 }

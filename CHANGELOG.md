@@ -1,3 +1,6 @@
+## [0.1.0]
+* Final release
+
 ## [0.0.4]
 * Updated CHANGELOG.md file
 
