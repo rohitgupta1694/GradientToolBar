@@ -2,10 +2,6 @@
 
 A Flutter package to add a gradient toolbar with a lot of customization.
 
-### Screenshots
-
-<img src="Screenshot1.png" height="500em" /> <img src="Screenshot2.png" height="500em" /> <img src="Screenshot3.png" height="500em" />
-
 ## Usage
 To use this plugin, add `gradient_toolbar` as a dependency in your [pubspec.yaml](https://github.com/rohitgupta1694/FlutterGithubUserSearch/blob/master/pubspec.yaml) file.
 
@@ -13,7 +9,7 @@ To use this plugin, add `gradient_toolbar` as a dependency in your [pubspec.yaml
   dependencies:
     flutter:
       sdk: flutter
-    gradient_toolbar: ^0.0.1
+    gradient_toolbar: ^0.0.4
 ```
 
 
