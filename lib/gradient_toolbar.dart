@@ -24,15 +24,18 @@ class GradientToolBar extends StatelessWidget {
       this.onTrailingIconClick,
       this.leadingIconColor,
       this.trailingIconColor})
-      : super(key: key);
+      : assert(title != null),
+        assert(needLeadingButton != null),
+        assert(needTrailingButton != null),
+        super(key: key);
 
-  final String title;
+  String title;
   double fontSize;
   TileMode gradientTileMode;
   FontStyle fontStyle;
   FontWeight fontWeight;
   IconData trailingIcon;
-  final bool needLeadingButton, needTrailingButton;
+  bool needLeadingButton, needTrailingButton;
   Color textColor,
       toolbarStartColor,
       toolbarEndColor,
@@ -134,6 +137,9 @@ class GradientToolBar extends StatelessWidget {
       : Container(child: Text(""));
 
   void getDefaultValues() {
+    if (title == null) title = "Gradient Tool Bar";
+    if (needLeadingButton == null) needLeadingButton = false;
+    if (needTrailingButton == null) needTrailingButton = false;
     if (trailingIcon == null) trailingIcon = Icons.search;
     if (fontSize == null) fontSize = 20.0;
     if (gradientTileMode == null) gradientTileMode = TileMode.clamp;

@@ -43,42 +43,16 @@ class _ExampleAppState extends State<ExampleApp> {
 
           ///This is the Gradient tool bar widget
           GradientToolBar(
-            title: "Gradient Toolbar",
-            // Toolbar Title Text
-            textColor: Colors.white,
-            // Toolbar Title Text Color
-            fontSize: 22.0,
-            // Toolbar Title Text Font Size
-            fontStyle: FontStyle.normal,
-            // Toolbar Title Text Font Style
-            fontWeight: FontWeight.w600,
-            // Toolbar Title Text Font Weight
-            needLeadingButton: true,
-            // Toolbar Back Button Visibility Flag
-            needTrailingButton: true,
-            // Toolbar Trailing Button Visibility Flag
-            trailingIcon: Icons.search,
-            // Toolbar Trailing Button Icon
-            leadingIconColor: Colors.white,
-            // Toolbar Leading Button Color
-            trailingIconColor: Colors.white,
-            // Toolbar Trailing Button Color
-            onLeadingIconClick: _handleLeadingButtonClick,
-            // Toolbar Leading Button Callback
-            onTrailingIconClick: _handleTrailingButtonClick,
-            // Toolbar Trailing Button Callback
-            toolbarStartColor: Color(0xFF414345),
-            // Toolbar Gradient Start Color
-            toolbarEndColor: Color(0xFF232526),
-            // Toolbar Gradient End Color
-            gradientTileMode: TileMode.clamp, // Toolbar Gradient Tile Mode
+            title: "Gradient ToolBar",
+            needLeadingButton: false,
+            needTrailingButton: false,
           ),
 
           /// Use Expanded widget to use rest of the screen.
           Expanded(
               child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[Text("Gradient Toolbar")],
+                children: <Widget>[Text("Gradient Toolbar sample")],
           ))
         ],
       ),
