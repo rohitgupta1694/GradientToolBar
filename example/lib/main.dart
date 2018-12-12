@@ -40,6 +40,8 @@ class _ExampleAppState extends State<ExampleApp> {
       /// Define Column in body and then add GradientToolBar widget as a child
       body: Column(
         children: <Widget>[
+
+          ///This is the Gradient tool bar widget
           GradientToolBar(
             title: "Gradient Toolbar",
             // Toolbar Title Text

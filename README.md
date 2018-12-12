@@ -19,11 +19,9 @@ To use this plugin, add `gradient_toolbar` as a dependency in your [pubspec.yaml
 
 ### Example
 
-Please find the [example](https://github.com/rohitgupta1694/GradientToolBar/blob/master/lib/example.dart):
+Please find the [example](https://github.com/rohitgupta1694/GradientToolBar/blob/master/example/lib/main.dart):
 
 ``` dart
-import 'package:flutter/material.dart';
-import 'package:gradient_toolbar/gradient_toolbar.dart';
 
 class ExampleApp extends StatefulWidget {
   @override
@@ -38,7 +36,8 @@ class _ExampleAppState extends State<ExampleApp> {
       /// Define Column in body and then add GradientToolBar widget as a child
       body: Column(
         children: <Widget>[
-          new GradientToolBar(
+        ///This is the Gradient tool bar widget
+          GradientToolBar(
             title: "Gradient Toolbar", // Toolbar Title Text
             textColor: Colors.white, // Toolbar Title Text Color
             fontSize: 22.0, // Toolbar Title Text Font Size
