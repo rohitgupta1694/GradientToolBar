@@ -1,8 +1,8 @@
 name: gradient_toolbar
-description: A Flutter package to add a gradient toolbar to any Flutter Application.
+description: A Flutter package to add a gradient toolbar with a lot of customization.
 version: 0.0.1
-author:
-homepage:
+author: Rohit Gupta <er.rohitgupta@outlook.com>
+homepage: https://github.com/rohitgupta1694/GradientToolBar
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
