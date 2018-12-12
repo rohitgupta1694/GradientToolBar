@@ -1,6 +1,8 @@
 # gradient_toolbar
 
 [![pub package](https://img.shields.io/pub/v/gradient_toolbar.svg)](https://pub.dartlang.org/packages/gradient_toolbar)
+
+
 A Flutter package to add a gradient toolbar with a lot of customization.
 
 ## Usage
